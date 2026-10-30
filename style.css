@@ -1,0 +1,137 @@
+/* Configurações gerais e cores básicas */
+:root {
+  --cor-principal: #6c5ce7;       /* Roxo */
+  --cor-secundaria: #0984e3;      /* Azul */
+  --cor-fundo: #f4f6fb;
+  --cor-card: #ffffff;
+  --cor-texto: #2d3436;
+  --cor-borda: #dfe6e9;
+  --cor-bom: #00b894;             /* Verde para bom desempenho */
+  --cor-atencao: #d63031;          /* Vermelho para atenção */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  padding: 20px;
+}
+
+/* Container principal para centralizar */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--cor-principal), var(--cor-secundaria));
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Grid de Cards de Resumo */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Estilo individual do Card (arredondado, fundo leve, sombra) */
+.card {
+  background-color: var(--cor-card);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid var(--cor-secundaria);
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 0.9rem;
+  color: #636e72;
+  margin-bottom: 8px;
+}
+
+.card-valor {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--cor-principal);
+}
+
+.subtext {
+  display: block;
+  font-size: 0.75rem;
+  color: #2e7d32;
+  margin-top: 4px;
+}
+
+/* Destaques em cards específicos */
+.card-bom { border-top-color: var(--cor-bom); }
+.card-atencao { border-top-color: var(--cor-atencao); }
+
+/* Tabela Responsiva */
+.table-container {
+  background-color: var(--cor-card);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  overflow-x: auto; /* Permite rolar para os lados no celular */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+th {
+  background-color: var(--cor-principal);
+  color: white;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f1f2f6;
+}
+
+/* Estilos de Situação */
+.status-bom {
+  color: var(--cor-bom);
+  font-weight: bold;
+}
+
+.status-atencao {
+  color: var(--cor-atencao);
+  font-weight: bold;
+}
+
+.status-indisponivel {
+  color: #b2bec3;
+  font-style: italic;
+}
