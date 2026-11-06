@@ -1,4 +1,3 @@
-PASSO 3 — Copie o código abaixo usando o botão Copiar do bloco de código.
 
 ```javascript
 // Configuração fixa do estudante (não pode ser alterada pela página)
