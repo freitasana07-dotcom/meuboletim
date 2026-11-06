@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,57 +13,84 @@
     <!-- Cabeçalho do Boletim -->
     <header class="header">
       <h1>Boletim Digital</h1>
-      <p class="subtitle">9º Ano — Estudante Exemplo</p>
+      <p class="subtitle">9º Ano — Turma 9B (Nº 1)</p>
     </header>
 
-    <!-- Área de Cards de Resumo -->
-    <section class="cards-grid">
-      <div class="card card-media">
-        <h3>Média Geral</h3>
-        <p id="card-media-valor" class="card-valor">—</p>
+    <!-- Área de Acesso (PIN) -->
+    <section id="area-login" class="card-login">
+      <h2>Acesso ao Boletim</h2>
+      <div class="info-aluno">
+        <span><strong>Turma:</strong> 9B</span> | 
+        <span><strong>Chamada:</strong> 1</span>
       </div>
-
-      <div class="card card-faltas">
-        <h3>Total de Faltas</h3>
-        <p id="card-faltas-valor" class="card-valor">—</p>
-      </div>
-
-      <div class="card card-bom">
-        <h3>Bom Desempenho</h3>
-        <p id="card-bom-valor" class="card-valor">—</p>
-      </div>
-
-      <div class="card card-atencao">
-        <h3>Precisam de Atenção</h3>
-        <p id="card-atencao-valor" class="card-valor">—</p>
-      </div>
-
-      <div class="card card-frequencia">
-        <h3>Frequência Geral</h3>
-        <p id="card-frequencia-valor" class="card-valor">92%</p>
-        <span class="subtext">Frequência adequada</span>
-      </div>
+      <form id="form-login">
+        <div class="campo-pin">
+          <label for="input-pin">Digite seu PIN:</label>
+          <input type="password" id="input-pin" maxlength="10" placeholder="••••" required autocomplete="off">
+        </div>
+        <button type="submit" id="btn-entrar">Entrar</button>
+      </form>
+      <p id="mensagem-login" class="mensagem-status"></p>
     </section>
 
-    <!-- Tabela de Disciplinas -->
-    <section class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Disciplina</th>
-            <th>1º Tri</th>
-            <th>2º Tri</th>
-            <th>3º Tri</th>
-            <th>Média</th>
-            <th>Faltas</th>
-            <th>Situação</th>
-          </tr>
-        </thead>
-        <tbody id="tabela-corpo">
-          <!-- O JavaScript vai preencher as linhas da tabela automaticamente aqui -->
-        </tbody>
-      </table>
-    </section>
+    <!-- Conteúdo do Boletim (Inicialmente Oculto) -->
+    <div id="conteudo-boletim" class="oculto">
+      <!-- Painel de Ações / Edição -->
+      <section class="painel-acoes">
+        <button id="btn-alternar-edicao" class="btn-acao">Alterar dados</button>
+        <button id="btn-salvar" class="btn-acao btn-salvar oculto">Salvar alterações</button>
+        <span id="mensagem-salvar" class="mensagem-status"></span>
+      </section>
+
+      <!-- Área de Cards de Resumo -->
+      <section class="cards-grid">
+        <div class="card card-media">
+          <h3>Média Geral</h3>
+          <p id="card-media-valor" class="card-valor">—</p>
+        </div>
+
+        <div class="card card-faltas">
+          <h3>Total de Faltas</h3>
+          <p id="card-faltas-valor" class="card-valor">—</p>
+        </div>
+
+        <div class="card card-bom">
+          <h3>Bom Desempenho</h3>
+          <p id="card-bom-valor" class="card-valor">—</p>
+        </div>
+
+        <div class="card card-atencao">
+          <h3>Precisam de Atenção</h3>
+          <p id="card-atencao-valor" class="card-valor">—</p>
+        </div>
+
+        <div class="card card-frequencia">
+          <h3>Frequência Geral</h3>
+          <p id="card-frequencia-valor" class="card-valor">92%</p>
+          <span class="subtext">Frequência adequada</span>
+        </div>
+      </section>
+
+      <!-- Tabela de Disciplinas -->
+      <section class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Disciplina</th>
+              <th>1º Tri</th>
+              <th>2º Tri</th>
+              <th>3º Tri</th>
+              <th>Média</th>
+              <th>Faltas</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-corpo">
+            <!-- O JavaScript vai preencher as linhas da tabela automaticamente aqui -->
+          </tbody>
+        </table>
+      </section>
+    </div>
   </div>
 
   <script src="script.js"></script>
