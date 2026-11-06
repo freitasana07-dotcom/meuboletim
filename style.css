@@ -1,3 +1,4 @@
+
 /* Configurações gerais e cores básicas */
 :root {
   --cor-principal: #6c5ce7;       /* Roxo */
@@ -48,6 +49,108 @@ body {
 .subtitle {
   font-size: 1.1rem;
   opacity: 0.9;
+}
+
+/* Card de Login / PIN */
+.card-login {
+  background-color: var(--cor-card);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 400px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  border-top: 5px solid var(--cor-principal);
+}
+
+.card-login h2 {
+  margin-bottom: 10px;
+  color: var(--cor-principal);
+  font-size: 1.4rem;
+}
+
+.info-aluno {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: #636e72;
+}
+
+.campo-pin {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.campo-pin label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.campo-pin input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* Painel de Ações e Botões */
+.painel-acoes {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-acao, #btn-entrar {
+  background-color: var(--cor-principal);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#btn-entrar {
+  width: 100%;
+}
+
+.btn-acao:hover, #btn-entrar:hover {
+  background-color: #5b4cc4;
+}
+
+.btn-salvar {
+  background-color: var(--cor-bom);
+}
+
+.btn-salvar:hover {
+  background-color: #00a383;
+}
+
+.mensagem-status {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-principal);
+}
+
+.mensagem-status.erro {
+  color: var(--cor-atencao);
+}
+
+.mensagem-status.sucesso {
+  color: var(--cor-bom);
+}
+
+/* Classe utilitária para ocultar elementos */
+.oculto {
+  display: none !important;
 }
 
 /* Grid de Cards de Resumo */
@@ -118,6 +221,21 @@ th {
 
 tr:hover {
   background-color: #f1f2f6;
+}
+
+/* Estilos de Campos Editáveis na Tabela */
+.input-edicao {
+  width: 60px;
+  padding: 6px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.input-edicao.invalido {
+  border-color: var(--cor-atencao);
+  background-color: #ffe6e6;
 }
 
 /* Estilos de Situação */
