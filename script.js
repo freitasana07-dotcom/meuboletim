@@ -1,6 +1,5 @@
 
-```javascript
-// Configuração fixa do estudante (não pode ser alterada pela página)
+`// Configuração fixa do estudante (não pode ser alterada pela página)
 const CONFIG_ALUNO = {
   turma: "9B",
   numeroChamada: 1,
@@ -666,5 +665,3 @@ document.getElementById("btn-salvar").addEventListener("click", async function (
     msgSalvar.className = "mensagem-status erro";
   }
 });
-
-```
